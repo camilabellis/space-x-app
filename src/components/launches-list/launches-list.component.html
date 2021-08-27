@@ -1,0 +1,6 @@
+<ul *ngIf="launches.length > 0">
+  <li *ngFor="let launch of launches">
+    <span>{{ launch['flight_number'] }}: </span>
+    <a routerLink="/detail/{{ launch['rocket']['rocket_id'] }}">{{ launch['mission_name'] }}</a>
+  </li>
+</ul>
